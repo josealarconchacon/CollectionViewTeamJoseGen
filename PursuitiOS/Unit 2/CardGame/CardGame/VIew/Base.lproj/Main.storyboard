@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h03-q1-tRC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Game Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardGameController" customModule="CardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkP-ON-lAH">
+                                <rect key="frame" x="125" y="117" width="125" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Three Card Monte"/>
+                                <connections>
+                                    <segue destination="vjr-Nu-FK2" kind="show" id="wLP-L5-4MV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJo-FI-Pkd">
+                                <rect key="frame" x="133" y="262" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Matching Game"/>
+                                <connections>
+                                    <segue destination="GGO-dc-o9p" kind="show" id="Bbj-zM-NqW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UVb-LY-RDb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807.20000000000005" y="-35.532233883058474"/>
+        </scene>
+        <!--Three Card Monte Controller-->
+        <scene sceneID="RXI-2N-Jqk">
+            <objects>
+                <viewController id="vjr-Nu-FK2" customClass="ThreeCardMonteController" customModule="CardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="43r-BL-JeR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCk-io-mpQ">
+                                <rect key="frame" x="27" y="255" width="104" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="vjr-Nu-FK2" eventType="touchUpInside" id="zcb-oq-LAN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-f2-w1r">
+                                <rect key="frame" x="251" y="254" width="104" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="vjr-Nu-FK2" eventType="touchUpInside" id="LrD-wI-jK2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eF-vd-19w">
+                                <rect key="frame" x="139" y="254" width="104" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="vjr-Nu-FK2" eventType="touchUpInside" id="dvS-Z2-XbX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fL-6M-21v">
+                                <rect key="frame" x="150" y="434" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="vjr-Nu-FK2" eventType="touchUpInside" id="wkk-AP-Z7X"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-DA-moO">
+                                <rect key="frame" x="20" y="495" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="btb-EX-rFJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="newGameButton" destination="0fL-6M-21v" id="f9F-ma-s9j"/>
+                        <outlet property="winningStatusLabel" destination="eRS-DA-moO" id="9QJ-vf-30W"/>
+                        <outletCollection property="allCardButtons" destination="dCk-io-mpQ" collectionClass="NSMutableArray" id="Wg4-jh-haf"/>
+                        <outletCollection property="allCardButtons" destination="4eF-vd-19w" collectionClass="NSMutableArray" id="hhR-k0-eCs"/>
+                        <outletCollection property="allCardButtons" destination="gWC-f2-w1r" collectionClass="NSMutableArray" id="GWe-mX-QGM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNB-nH-oDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.5999999999999" y="-452.02398800599701"/>
+        </scene>
+        <!--Matching Game Controller-->
+        <scene sceneID="4XD-3g-be4">
+            <objects>
+                <viewController id="GGO-dc-o9p" customClass="MatchingGameController" customModule="CardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qd0-Uu-4zx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dk4-ey-iR2">
+                                <rect key="frame" x="17" y="310" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="YV1-Az-R0y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HQ-mS-biu">
+                                <rect key="frame" x="187" y="310" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="JVz-Uh-AN7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldD-Fm-wmw">
+                                <rect key="frame" x="273" y="310" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="hdc-aB-UFT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-NK-abw">
+                                <rect key="frame" x="101" y="310" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="5Xg-AD-dn9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSw-sC-VKi">
+                                <rect key="frame" x="16" y="171" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="atI-b4-jHE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysQ-Y0-Q9K">
+                                <rect key="frame" x="187" y="171" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="B1w-tp-kZr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ync-yo-0Mx">
+                                <rect key="frame" x="273" y="171" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="0ct-TB-U7P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFl-9n-PAu">
+                                <rect key="frame" x="100" y="171" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="ht3-hE-O8A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu6-Gm-gbv">
+                                <rect key="frame" x="16" y="442" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="lac-ig-9q4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UI-Uc-f3c">
+                                <rect key="frame" x="186" y="442" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="ugt-l1-29A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-Gf-G1h">
+                                <rect key="frame" x="272" y="442" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="tp8-y3-CkV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vT-Fq-e0B">
+                                <rect key="frame" x="100" y="442" width="85" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokemonCardBack"/>
+                                <connections>
+                                    <action selector="flippedCard:" destination="GGO-dc-o9p" eventType="touchUpInside" id="duA-Jw-PAj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sOZ-1P-kNO"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="allCardButtons" destination="hSw-sC-VKi" collectionClass="NSMutableArray" id="2qe-4y-AzR"/>
+                        <outletCollection property="allCardButtons" destination="gFl-9n-PAu" collectionClass="NSMutableArray" id="Veb-kx-TSl"/>
+                        <outletCollection property="allCardButtons" destination="ysQ-Y0-Q9K" collectionClass="NSMutableArray" id="7nq-iw-G2e"/>
+                        <outletCollection property="allCardButtons" destination="Ync-yo-0Mx" collectionClass="NSMutableArray" id="Qjy-8k-xBQ"/>
+                        <outletCollection property="allCardButtons" destination="dk4-ey-iR2" collectionClass="NSMutableArray" id="hAI-1c-Xmu"/>
+                        <outletCollection property="allCardButtons" destination="Aeo-NK-abw" collectionClass="NSMutableArray" id="SxX-lG-gQF"/>
+                        <outletCollection property="allCardButtons" destination="3HQ-mS-biu" collectionClass="NSMutableArray" id="kuP-7k-1fm"/>
+                        <outletCollection property="allCardButtons" destination="ldD-Fm-wmw" collectionClass="NSMutableArray" id="CmW-3i-TL0"/>
+                        <outletCollection property="allCardButtons" destination="hu6-Gm-gbv" collectionClass="NSMutableArray" id="3Qz-dD-okv"/>
+                        <outletCollection property="allCardButtons" destination="6vT-Fq-e0B" collectionClass="NSMutableArray" id="ar8-c2-xNP"/>
+                        <outletCollection property="allCardButtons" destination="1UI-Uc-f3c" collectionClass="NSMutableArray" id="Dl6-Mw-d18"/>
+                        <outletCollection property="allCardButtons" destination="mh0-Gf-G1h" collectionClass="NSMutableArray" id="bxb-Ph-Ltn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDP-eS-kNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.5999999999999" y="255.92203898050977"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hiM-CE-c8U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h03-q1-tRC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kPc-PE-Tmn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Luy-AW-VG6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k75-7E-3hS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="-35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardBackRed" width="164.63999938964844" height="234.24000549316406"/>
+        <image name="pokemonCardBack" width="194.39999389648438" height="264.239990234375"/>
+    </resources>
+</document>
